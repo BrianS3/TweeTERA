@@ -1,0 +1,9 @@
+.env
+scratch.py
+output_data/
+.idea/
+*.pyc
+*/nlp.cpython-39.pyc
+*/database.cpython-39.pyc
+*/credentials.cpython-39.pyc
+*/__init__.cpython-39.pyc

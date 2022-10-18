@@ -1,0 +1,32 @@
+from setuptools import setup
+
+setup(name='gps_695',
+      version='0.1',
+      description='University of Michigan Milestone 2 Project',
+      url='https://github.com/BrianS3/MI2_drown_murphy_seko',
+      author='Drown, Gretchyn; Murphy, Patrick; Seko, Brian',
+      author_email='bseko@umich.edu',
+      license='MIT',
+      packages=['gps_695'],
+      install_requires=[
+            'pip',
+            'json',
+            'dotenv',
+            'requests',
+            'mysql-connector-python',
+            'pytrends',
+            'plotly',
+            'warnings',
+            'googletrans==3.1.0a0',
+            'gensim',
+            'operator',
+            'text2emotion',
+            'emoji==1.6.3',
+            'pandas',
+            'numpy',
+            'tqdm',
+            're',
+            'statsmodel',
+            'datetime'
+      ],
+      zip_safe=False)
