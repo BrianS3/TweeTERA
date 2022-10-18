@@ -22,12 +22,12 @@ def create_mysql_database():
     Function creates mysql database to store twitter data.
     :return: None
     """
-    from gps_695 import database as d
+    from TweeTERA import database as d
     # import mysql
     # import sqlalchemy
     # from mysql.connector import connect, Error
 
-    file = open('gps_695/database_table_creation.sql', 'r')
+    file = open('TweeTERA/database_table_creation.sql', 'r')
     sql = file.read()
     file.close
 
@@ -40,9 +40,9 @@ def reset_mysql_database():
     Function resets mysql database for new data loading. The process will remove all tables from the database and recreate it.
     :return: None
     """
-    from gps_695 import database as d
+    from TweeTERA import database as d
 
-    file = open('gps_695/database_clear.sql', 'r')
+    file = open('TweeTERA/database_clear.sql', 'r')
     sql = file.read()
     file.close
 
@@ -83,8 +83,8 @@ def load_tweets(keyword, start_date, end_date, results = 500, first_run=True):
     :param results: number of results to return, max 500, int
     :return: loads tweet data to DB"""
     import pandas as pd
-    from gps_695 import database as d
-    from gps_695 import nlp as n
+    from TweeTERA import database as d
+    from TweeTERA import nlp as n
     import warnings
     import re
     warnings.filterwarnings("ignore")
@@ -249,8 +249,8 @@ def database_load(search_term):
     :param search_term: term used to search and predict sentiment/time to live
     :return: No objects returned, database is loaded
     """
-    from gps_695 import database as d
-    from gps_695 import nlp as n
+    from TweeTERA import database as d
+    from TweeTERA import nlp as n
     import datetime as dt
     from tqdm import tqdm
     import os

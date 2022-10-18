@@ -36,8 +36,8 @@ All credentials for this package are stored in an .env file for convenience. Thi
 ### Loading credentials:
 
 ```
-from gps_695 import database as d
-from gps_695 import credentials as c
+from TweeTERA import database as d
+from TweeTERA import credentials as c
 import os
 
 # Get information about functions
@@ -70,7 +70,7 @@ c.load_env_credentials()
 
 ```
 import os 
-from gps_695 import credentials as 
+from TweeTERA import credentials as 
 
 c.load_env_credentials()
 
@@ -89,8 +89,8 @@ print(os.getenv('twitter_bearer'))
 Want to dive right in and just start analyzing tweets? Run the following:
 
 ```
-from gps_695 import credentials as c
-from gps_695 import database as d
+from TweeTERA import credentials as c
+from TweeTERA import database as d
 
 c.load_env_credentials()
 d.database_load("hello")
@@ -101,8 +101,8 @@ d.database_load("hello")
 If you set up multiple databases, you can string together an analysis:
 
 ```commandline
-from gps_695 import credentials as c
-from gps_695 import database as d
+from TweeTERA import credentials as c
+from TweeTERA import database as d
 
 databases = ['database_1','database_2','database_3','database_4']
 words = ['Iran', 'Nury Martinez', 'California drought', 'Putin']
@@ -120,8 +120,8 @@ for i in range(4):
 This package will automatically create a database when you choose to execute ```database.database_load("keyword")```; however you can do this process on your own at any time.
 
 ```
-from gps_695 import credentials as c
-from gps_695 import database as d
+from TweeTERA import credentials as c
+from TweeTERA import database as d
 
 c.load_env_credentials()
 d.reset_mysql_database()
@@ -132,8 +132,8 @@ d.reset_mysql_database()
 If you want to load a single database load, you can. Be advised this will not perform any sentiment analysis.
 
 ```
-from gps_695 import credentials as c
-from gps_695 import database as d
+from TweeTERA import credentials as c
+from TweeTERA import database as d
 
 c.load_env_credentials()
 d.load_tweets("hello", '2020-01-01', '2020-02-01', 50)
@@ -144,8 +144,8 @@ d.load_tweets("hello", '2020-01-01', '2020-02-01', 50)
 If you wish to manually connect to your database and extract data you can do so as follows:
 
 ```
-from gps_695 import database as d
-from gps_695 import credentials as c
+from TweeTERA import database as d
+from TweeTERA import credentials as c
 import pandas as pd
 
 c.load_env_credentials()
@@ -161,7 +161,7 @@ df = pd.read_sql_query(query, cnx)
 This package has a feature that allows you to find out if a specific term or phrase is trending before executing a full run. Calling check_trend will display an analysis from Google Trends for the past 12 months. Google Trends uses Twitter as a resource, and this may help you evaluate the right keyword or phrase to run for your analysis.
 
 ```
-from gps_695 import visuals as v
+from TweeTERA import visuals as v
 v.check_trend("hello") #single word analysis
 
 v.check_trend("hello", "goodbye", "nice to meet you") #or put in multiple words
@@ -170,8 +170,8 @@ v.check_trend("hello", "goodbye", "nice to meet you") #or put in multiple words
 To get a full analysis of your tweets use the generate_report function. A html report called "Sentiment_Report.html" will be generated in your current working directory.
 
 ```
-from gps_695 import credentials as c
-from gps_695 import visuals as v
+from TweeTERA import credentials as c
+from TweeTERA import visuals as v
 
 c.load_env_credentials()
 v.generate_report()
@@ -209,7 +209,7 @@ Common errors that you may encounter:
 1) Common errors can be resolved if credentials.load_env_credentials() has not been called in your current session. Many IDEs and python environment require you to import credentials for each session. If you are experiencing SQL errors, API requests being blocked, or general issues, make sure to run the following before any other code:
 
 ```
-from gps_695 import credentials as c
+from TweeTERA import credentials as c
 
 c.load_env_credentials()
 ```

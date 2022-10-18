@@ -8,8 +8,8 @@ def generate_report():
     import os
     import numpy as np
     import pandas as pd
-    from gps_695 import visuals as v
-    from gps_695 import database as d
+    from TweeTERA import visuals as v
+    from TweeTERA import database as d
 
     print("Generating charts...")
     v.streamgraph()
@@ -207,7 +207,7 @@ def streamgraph():
     '''
     import altair as alt
     from altair_saver import save
-    from gps_695 import database as d
+    from TweeTERA import database as d
     import pandas as pd
     import numpy as np
 
@@ -241,7 +241,7 @@ def emo_choropleth():
     Creates a choropleth map of most common overall_emo by state, excluding 'Neutral' and 'Mixed'
     :return: None, image saved to "output_data" directory.
     '''
-    from gps_695 import database as d
+    from TweeTERA import database as d
     import pandas as pd
     import plotly.express as px
     import numpy as np
@@ -302,7 +302,7 @@ def hashtag_chart():
     import numpy as np
     from altair_saver import save
     from collections import Counter
-    from gps_695 import database as d
+    from TweeTERA import database as d
     
     cnx = d.connect_to_database()
 
@@ -333,7 +333,7 @@ def forecast_chart():
     Creates a line chart with projected tweet volumes for next 10 days
     :return: altair bar chart visualization
     '''
-    from gps_695 import database as d
+    from TweeTERA import database as d
     import pandas as pd
     from statsmodels.tsa.arima.model import ARIMA
     import datetime
@@ -385,7 +385,7 @@ def interactive_tweet_trends():
     import pandas as pd
     import altair as alt
     from altair_saver import save
-    from gps_695 import database as d
+    from TweeTERA import database as d
 
     cnx = d.connect_to_database()
 
@@ -453,7 +453,7 @@ def animated_emo_choropleth():
     import pandas as pd
     from collections import Counter
     import plotly.express as px
-    from gps_695 import database as d
+    from TweeTERA import database as d
 
     cnx = d.connect_to_database()
 
@@ -499,7 +499,7 @@ def emotion_by_div_reg():
     import numpy as np
     from altair_saver import save
     from sklearn import preprocessing
-    from gps_695 import database as d
+    from TweeTERA import database as d
 
     cnx = d.connect_to_database()
     df = pd.read_sql_query("""
@@ -560,7 +560,7 @@ def simple_trend():
     import pandas as pd
     import altair as alt
     from altair_saver import save
-    from gps_695 import database as d
+    from TweeTERA import database as d
 
     cnx = d.connect_to_database()
     query = """
@@ -585,7 +585,7 @@ def division_author_count():
     import pandas as pd
     import altair as alt
     from altair_saver import save
-    from gps_695 import database as d
+    from TweeTERA import database as d
 
     cnx = d.connect_to_database()
 

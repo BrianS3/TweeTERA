@@ -101,7 +101,7 @@ def analyze_tweets():
     :return: None, database loaded with data
     '''
     import text2emotion as te
-    from gps_695 import database as d
+    from TweeTERA import database as d
     import pandas as pd
     from tqdm import tqdm
 
@@ -211,8 +211,8 @@ def gridsearch(search_term):
     :return: top two keywords as a list with lowest MSE from google trends, to search term.
     """
     import pandas as pd
-    from gps_695 import database as d
-    from gps_695 import nlp as n
+    from TweeTERA import database as d
+    from TweeTERA import nlp as n
     from itertools import product
     from collections import Counter
 
@@ -267,8 +267,8 @@ def create_sentiment_model():
     file = open('output_data/sentiment_optimization.txt', 'w+')
 
     import pandas as pd
-    from gps_695 import credentials as c
-    from gps_695 import database as d
+    from TweeTERA import credentials as c
+    from TweeTERA import database as d
     from sklearn.metrics import accuracy_score
     from sklearn.feature_extraction.text import TfidfVectorizer
     from sklearn.model_selection import train_test_split
