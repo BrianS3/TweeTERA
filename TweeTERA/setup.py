@@ -3,6 +3,7 @@ from setuptools import setup
 setup(name='TweeTERA',
       version='1.0.1',
       description='Twitter Sentiment and Analysis Package',
+      include_package_data = True,
       long_description="README.md",
       long_description_content_type='text/markdown',
       url='https://github.com/BrianS3/TweeTERA',
