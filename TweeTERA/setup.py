@@ -1,13 +1,13 @@
 from setuptools import setup
 
 setup(name='TweeTERA',
-      version='1.0.1',
+      version='1.0.2',
       description='Twitter Sentiment and Analysis Package',
       include_package_data = True,
       long_description="README.md",
       long_description_content_type='text/markdown',
       url='https://github.com/BrianS3/TweeTERA',
-      download_url='https://github.com/BrianS3/TweeTERA/archive/refs/tags/v1.0.1.tar.gz',
+      download_url='https://github.com/BrianS3/TweeTERA/archive/refs/tags/V1.0.2.tar.gz',
       author='Drown, Gretchyn; Murphy, Patrick; Seko, Brian',
       author_email='bseko@umich.edu',
       license='MIT',
