@@ -22,6 +22,6 @@ mysqlclient
 scikit-learn
 itertools
 nltk
-gensim==4.2.0
+gensim
 langdetect==1.0.9
 pytrends

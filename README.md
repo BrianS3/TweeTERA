@@ -13,6 +13,10 @@ There are two basic requirements to use TweetERA:
 
 # Getting Started
 
+## Installation Requirements
+
+This package requires users to install [gensim](https://pypi.org/project/gensim/) prior to use.
+
 ## Setting up MySQL
 To get started you need to first setup a MySQL database. If you have never done this, check out a [this tutorial](https://www.youtube.com/watch?v=u6vJEpRB_zc&t=1s) for more information.
 

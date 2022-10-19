@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='TweeTERA',
-      version='1.0.4',
+      version='1.0.5',
       description='Twitter Sentiment and Analysis Package',
       include_package_data = True,
       long_description="""
@@ -12,7 +12,7 @@ setup(name='TweeTERA',
       """,
       long_description_content_type='text/markdown',
       url='https://github.com/BrianS3/TweeTERA',
-      download_url='https://github.com/BrianS3/TweeTERA/archive/refs/tags/v1.0.4.tar.gz',
+      download_url='https://github.com/BrianS3/TweeTERA/archive/refs/tags/v1.0.5.tar.gz',
       author='Drown, Gretchyn; Murphy, Patrick; Seko, Brian',
       author_email='bseko@umich.edu',
       license='MIT',
@@ -42,7 +42,6 @@ setup(name='TweeTERA',
             'scikit-learn',
             'itertools',
             'nltk',
-            'gensim',
             'langdetect==1.0.9',
             'pytrends'
       ],
