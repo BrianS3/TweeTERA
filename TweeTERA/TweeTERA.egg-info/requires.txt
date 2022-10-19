@@ -1,4 +1,4 @@
-dotenv
+python-dotenv
 requests
 mysql-connector-python
 pytrends
