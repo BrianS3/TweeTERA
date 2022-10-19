@@ -2,8 +2,8 @@ from setuptools import setup
 
 setup(name='TweeTERA',
       version='0.1',
-      description='University of Michigan Milestone 2 Project',
-      url='https://github.com/BrianS3/MI2_drown_murphy_seko',
+      description='Twitter Sentiment and Analysis Package',
+      url='https://github.com/BrianS3/TweeTERA',
       author='Drown, Gretchyn; Murphy, Patrick; Seko, Brian',
       author_email='bseko@umich.edu',
       license='MIT',
