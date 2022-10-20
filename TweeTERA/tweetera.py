@@ -51,7 +51,7 @@ def create_env_variables(db_user=None, db_pass=None, api_bearer=None, db_host=No
         :param match:credential match
         :return: None
         """
-        with open(".env", "a+") as fr:
+        with open(".env", "r+") as fr:
             lines = fr.readlines()
         with open(".env", "w") as fw:
             for line in lines:
