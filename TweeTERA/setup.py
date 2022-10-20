@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='TweeTERA',
-      version='1.0.12',
+      version='1.0.13',
       description='Twitter Sentiment and Analysis Package',
       include_package_data = True,
       long_description="""
@@ -11,8 +11,9 @@ setup(name='TweeTERA',
       Simply enter your keyword or phrase and let the package do the rest.
       """,
       url='https://github.com/BrianS3/TweeTERA',
-      download_url='https://github.com/BrianS3/TweeTERA/archive/refs/tags/v1.0.12.tar.gz',
+      download_url='https://github.com/BrianS3/TweeTERA/archive/refs/tags/v1.0.13.tar.gz',
       author='Drown, Gretchyn; Murphy, Patrick; Seko, Brian',
       author_email='bseko@umich.edu',
       license='MIT',
+      py_modules = ['tweetera'],
       zip_safe=False)
