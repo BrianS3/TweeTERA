@@ -902,7 +902,7 @@ def create_sentiment_model():
     df2['pred'] = gpred2.tolist()
     column_list = list(df2.columns)
 
-    cnx = d.connect_to_database()
+    cnx = connect_to_database()
     for ind, row in tqdm(df2.iterrows()):
         query = (f"""
                     UPDATE TWEET_TEXT
