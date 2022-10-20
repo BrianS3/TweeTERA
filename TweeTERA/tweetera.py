@@ -27,6 +27,7 @@ def install_dependencies():
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','DateTime'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','altair-saver'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','collection'])
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install','XlsxWriter'])
 
     import nltk
     nltk.download('omw-1.4')
