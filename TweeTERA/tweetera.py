@@ -352,7 +352,7 @@ def load_tweets(keyword, start_date, end_date, results = 500, first_run=True):
     df_text['TIDY_TWEET'] = [re.sub("[']", "", item) for item in df_text['TIDY_TWEET']]
     column_list = list(df_text.columns)
 
-    cnx = d.connect_to_database()
+    cnx = connect_to_database()
     print("Connection established with database")
 
     for ind, row in df_text.iterrows():
