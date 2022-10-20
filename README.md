@@ -20,9 +20,9 @@ This package is built on a number of python packages. The current release versio
 To install the required packages:
 
 ```
-import TweeTERA as t
+from TweeTERA import credentials as c
 
-t.install_dependencies()
+c.install_dependencies()
 ```
 
 For a full list of the package dependencies, review the [__init__.py](TweeTERA/__init__.py) file.
