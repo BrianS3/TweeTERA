@@ -1,9 +1,5 @@
-credentials.py
-database.py
-nlp.py
 setup.cfg
 setup.py
-visuals.py
 TweeTERA.egg-info/PKG-INFO
 TweeTERA.egg-info/SOURCES.txt
 TweeTERA.egg-info/dependency_links.txt
