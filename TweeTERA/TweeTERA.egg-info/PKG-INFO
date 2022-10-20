@@ -1,9 +1,9 @@
 Metadata-Version: 2.1
 Name: TweeTERA
-Version: 1.0.13
+Version: 1.0.14
 Summary: Twitter Sentiment and Analysis Package
 Home-page: https://github.com/BrianS3/TweeTERA
-Download-URL: https://github.com/BrianS3/TweeTERA/archive/refs/tags/v1.0.13.tar.gz
+Download-URL: https://github.com/BrianS3/TweeTERA/archive/refs/tags/v1.0.14.tar.gz
 Author: Drown, Gretchyn; Murphy, Patrick; Seko, Brian
 Author-email: bseko@umich.edu
 License: MIT

@@ -22,7 +22,7 @@ def install_dependencies():
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','plotly'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','tqdm'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','nbformat'])
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install','statsmodel'])
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install','statsmodels'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','kaleido'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','DateTime'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','altair-saver'])
