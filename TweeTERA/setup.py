@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='TweeTERA',
-      version='1.0.6',
+      version='1.0.7',
       description='Twitter Sentiment and Analysis Package',
       include_package_data = True,
       long_description="""
@@ -10,38 +10,10 @@ setup(name='TweeTERA',
       It will also perform a sentiment analysis on the tweets, encouraging users to run analyze new data frequently. 
       Simply enter your keyword or phrase and let the package do the rest.
       """,
-      long_description_content_type='text/markdown',
       url='https://github.com/BrianS3/TweeTERA',
-      download_url='https://github.com/BrianS3/TweeTERA/archive/refs/tags/v1.0.6.tar.gz',
+      download_url='https://github.com/BrianS3/TweeTERA/archive/refs/tags/v1.0.7.tar.gz',
       author='Drown, Gretchyn; Murphy, Patrick; Seko, Brian',
       author_email='bseko@umich.edu',
       license='MIT',
       py_modules = ['credentials', 'database', 'nlp', 'visuals'],
-      install_requires=[
-            'python-dotenv',
-            'requests',
-            'mysql-connector-python',
-            'pytrends',
-            'plotly',
-            'operator',
-            'text2emotion==0.0.5',
-            'emoji==1.6.3',
-            'pandas',
-            'numpy',
-            'tqdm',
-            'statsmodel',
-            'datetime',
-            'nbformat',
-            'kaleido',
-            'DateTime',
-            'altair-saver',
-            'collection',
-            'XlsxWriter',
-            'mysqlclient',
-            'scikit-learn',
-            'itertools',
-            'nltk',
-            'langdetect==1.0.9',
-            'pytrends'
-      ],
       zip_safe=False)

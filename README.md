@@ -15,7 +15,17 @@ There are two basic requirements to use TweetERA:
 
 ## Installation Requirements
 
-This package requires users to install [gensim](https://pypi.org/project/gensim/) prior to use.
+This package is built on a number of python packages. The current release version has conflict with PYPI installer and requires the user to install dependencies.
+
+To install the required packages:
+
+```
+import TweeTERA as t
+
+t.install_dependencies()
+```
+
+For a full list of the package dependencies, review the [__init__.py](TweeTERA/__init__.py) file.
 
 ## Setting up MySQL
 To get started you need to first setup a MySQL database. If you have never done this, check out a [this tutorial](https://www.youtube.com/watch?v=u6vJEpRB_zc&t=1s) for more information.

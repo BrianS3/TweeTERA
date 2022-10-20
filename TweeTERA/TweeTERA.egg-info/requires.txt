@@ -3,7 +3,6 @@ requests
 mysql-connector-python
 pytrends
 plotly
-gensim
 operator
 text2emotion==0.0.5
 emoji==1.6.3
