@@ -8,5 +8,4 @@ TweeTERA.egg-info/PKG-INFO
 TweeTERA.egg-info/SOURCES.txt
 TweeTERA.egg-info/dependency_links.txt
 TweeTERA.egg-info/not-zip-safe
-TweeTERA.egg-info/requires.txt
 TweeTERA.egg-info/top_level.txt
