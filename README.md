@@ -20,9 +20,9 @@ This package is built on a number of python packages. The current release versio
 To install the required packages:
 
 ```
-from TweeTERA import credentials as c
+import tweetera as t
 
-c.install_dependencies()
+t.install_dependencies()
 ```
 
 For a full list of the package dependencies, review the [__init__.py](TweeTERA/__init__.py) file.
@@ -50,12 +50,11 @@ All credentials for this package are stored in an .env file for convenience. Thi
 ### Loading credentials:
 
 ```
-from TweeTERA import database as d
-from TweeTERA import credentials as c
+import tweetera as t
 import os
 
 # Get information about functions
-help(c.create_env_variables)
+help(t.create_env_variables)
 
 # set up new environmental variables
 db_user = ''
@@ -65,28 +64,28 @@ db_host = ''
 database = ''
 
 #you can load
-c.create_env_variables(db_user=db_user, db_pass=db_pass, api_bearer=api_bearer, db_host=db_host, database=database)
+t.create_env_variables(db_user=db_user, db_pass=db_pass, api_bearer=api_bearer, db_host=db_host, database=database)
 ```
 
 Once loaded you can change the name of any variable as needed.
 
 ```
-c.create_env_variables(database='new_db_name')
+t.create_env_variables(database='new_db_name')
 ```
 
 Once the .env file is created, use the following code to load your credentials per session.
 
 ```
-c.load_env_credentials()
+t.load_env_credentials()
 ```
 
 ### Check your credentials
 
 ```
 import os 
-from TweeTERA import credentials as 
+import tweetera as t
 
-c.load_env_credentials()
+t.load_env_credentials()
 
 print(os.getenv('mysql_username'))
 print(os.getenv('mysql_pass'))
@@ -103,11 +102,10 @@ print(os.getenv('twitter_bearer'))
 Want to dive right in and just start analyzing tweets? Run the following:
 
 ```
-from TweeTERA import credentials as c
-from TweeTERA import database as d
+import tweetera as t
 
-c.load_env_credentials()
-d.database_load("hello")
+t.load_env_credentials()
+t.database_load("hello")
 ```
 
 ## Do several database loads
@@ -115,30 +113,29 @@ d.database_load("hello")
 If you set up multiple databases, you can string together an analysis:
 
 ```commandline
-from TweeTERA import credentials as c
-from TweeTERA import database as d
+import tweetera as t
 
 databases = ['database_1','database_2','database_3','database_4']
 words = ['Iran', 'Nury Martinez', 'California drought', 'Putin']
 
 for i in range(4):
 
-    c.create_env_variables(database = databases[i])
-    c.load_env_credentials()
-    d.database_load(words[i])
+    t.create_env_variables(database = databases[i])
+    t.load_env_credentials()
+    t.database_load(words[i])
 ```
 
+Please note that the generate_report function will overwrite itself and should not be called in a loop to return multiple results. See below for more details.
 
 ## Creating your database
 
 This package will automatically create a database when you choose to execute ```database.database_load("keyword")```; however you can do this process on your own at any time.
 
 ```
-from TweeTERA import credentials as c
-from TweeTERA import database as d
+import tweetera as t
 
-c.load_env_credentials()
-d.reset_mysql_database()
+t.load_env_credentials()
+t.reset_mysql_database()
 ```
 
 ## Partial database loads
@@ -146,11 +143,10 @@ d.reset_mysql_database()
 If you want to load a single database load, you can. Be advised this will not perform any sentiment analysis.
 
 ```
-from TweeTERA import credentials as c
-from TweeTERA import database as d
+import tweetera as t
 
-c.load_env_credentials()
-d.load_tweets("hello", '2020-01-01', '2020-02-01', 50)
+t.load_env_credentials()
+t.load_tweets("hello", '2020-01-01', '2020-02-01', 50)
 ```
 
 ## Database connections
@@ -158,11 +154,10 @@ d.load_tweets("hello", '2020-01-01', '2020-02-01', 50)
 If you wish to manually connect to your database and extract data you can do so as follows:
 
 ```
-from TweeTERA import database as d
-from TweeTERA import credentials as c
+import tweetera as t
 import pandas as pd
 
-c.load_env_credentials()
+t.load_env_credentials()
 
 query = "SELECT * FROM TWEET_TEXT;"
 
@@ -175,20 +170,19 @@ df = pd.read_sql_query(query, cnx)
 This package has a feature that allows you to find out if a specific term or phrase is trending before executing a full run. Calling check_trend will display an analysis from Google Trends for the past 12 months. Google Trends uses Twitter as a resource, and this may help you evaluate the right keyword or phrase to run for your analysis.
 
 ```
-from TweeTERA import visuals as v
-v.check_trend("hello") #single word analysis
+import tweetera as t
+t.check_trend("hello") #single word analysis
 
-v.check_trend("hello", "goodbye", "nice to meet you") #or put in multiple words
+t.check_trend("hello", "goodbye", "nice to meet you") #or put in multiple words
 ```
 
 To get a full analysis of your tweets use the generate_report function. A html report called "Sentiment_Report.html" will be generated in your current working directory.
 
 ```
-from TweeTERA import credentials as c
-from TweeTERA import visuals as v
+import tweetera as t
 
-c.load_env_credentials()
-v.generate_report()
+t.load_env_credentials()
+t.generate_report()
 ```
 
 All outputs from the modeling and visualization process can be found in your current working directory under "output_data".
@@ -223,9 +217,9 @@ Common errors that you may encounter:
 1) Common errors can be resolved if credentials.load_env_credentials() has not been called in your current session. Many IDEs and python environment require you to import credentials for each session. If you are experiencing SQL errors, API requests being blocked, or general issues, make sure to run the following before any other code:
 
 ```
-from TweeTERA import credentials as c
+import tweetera as t
 
-c.load_env_credentials()
+t.load_env_credentials()
 ```
 
 
