@@ -20,7 +20,6 @@ def install_dependencies():
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','pytrends'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','python-dotenv'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','plotly'])
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install','operator'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','tqdm'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','nbformat'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install','statsmodel'])

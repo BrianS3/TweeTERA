@@ -1,5 +1,6 @@
 setup.cfg
 setup.py
+tweetera.py
 TweeTERA.egg-info/PKG-INFO
 TweeTERA.egg-info/SOURCES.txt
 TweeTERA.egg-info/dependency_links.txt
