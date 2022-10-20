@@ -44,14 +44,15 @@ def create_env_variables(db_user=None, db_pass=None, api_bearer=None, db_host=No
     :param db_host: server information for database
     :param database: name of mysql database, example "databse1" or "master"
     :return: None
-    """
+    """ 
+    
     def write_action(match):
         """
         removes credential line so you can re-write it
         :param match:credential match
         :return: None
         """
-        with open(".env", "r+") as fr:
+        with open(".env", "r") as fr:
             lines = fr.readlines()
         with open(".env", "w") as fw:
             for line in lines:
@@ -59,30 +60,55 @@ def create_env_variables(db_user=None, db_pass=None, api_bearer=None, db_host=No
                     fw.write(line)
 
     if db_user != None:
-        write_action('mysql_username')
-        with open(".env", "a+") as f:
-            f.write(f"mysql_username={db_user}")
-            f.write("\n")
+        try:
+            write_action('mysql_username')
+            with open(".env", "a+") as f:
+                f.write(f"mysql_username={db_user}")
+                f.write("\n")
+        except:
+            with open(".env", "a+") as f:
+                f.write(f"mysql_username={db_user}")
+                f.write("\n")
     if db_pass != None:
-        write_action('mysql_pass')
-        with open(".env", "a+") as f:
-            f.write(f"mysql_pass={db_pass}")
-            f.write("\n")
+        try:
+            write_action('mysql_pass')
+            with open(".env", "a+") as f:
+                f.write(f"mysql_pass={db_pass}")
+                f.write("\n")
+        except:
+            with open(".env", "a+") as f:
+                f.write(f"mysql_pass={db_pass}")
+                f.write("\n")
     if api_bearer != None:
-        write_action('twitter_bearer')
-        with open(".env", "a+") as f:
-            f.write(f"twitter_bearer={api_bearer}")
-            f.write("\n")
+        try:
+            write_action('twitter_bearer')
+            with open(".env", "a+") as f:
+                f.write(f"twitter_bearer={api_bearer}")
+                f.write("\n")
+        except:
+            with open(".env", "a+") as f:
+                f.write(f"twitter_bearer={api_bearer}")
+                f.write("\n")
     if db_host != None:
-        write_action('db_host')
-        with open(".env", "a+") as f:
-            f.write(f"db_host={db_host}")
-            f.write("\n")
+        try:
+            write_action('db_host')
+            with open(".env", "a+") as f:
+                f.write(f"db_host={db_host}")
+                f.write("\n")
+        except:
+            with open(".env", "a+") as f:
+                f.write(f"db_host={db_host}")
+                f.write("\n")
     if database != None:
-        write_action('database')
-        with open(".env", "a+") as f:
-            f.write(f"database={database}")
-            f.write("\n")
+        try:
+            write_action('database')
+            with open(".env", "a+") as f:
+                f.write(f"database={database}")
+                f.write("\n")
+        except:
+            with open(".env", "a+") as f:
+                f.write(f"database={database}")
+                f.write("\n")
 
 def load_env_credentials():
     """
