@@ -243,3 +243,7 @@ t.load_env_credentials()
     If you experience this error, nest your code under
 
     ```if __name__ == "__main__":```
+    
+4) "output_data" directory not found
+    
+    The ```load_database()``` function will create a default directory for package results for the users. In this current release, the directory can fail to load. When initializing the loading process users should check that this directory appeared in their current working directory. If not, cancel the run and refresh.
