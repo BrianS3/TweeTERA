@@ -190,7 +190,7 @@ All outputs from the modeling and visualization process can be found in your cur
 # FAQs
 1) How long does the package take to run?
 
-    Package run times are usually between 15-30 minutes, depending on your internet connection speed. Run times are subject to the complexity of tweets, where higher volume and more complex speech will increase runtime.
+    Package run times are usually between 15-45 minutes, depending on your internet connection speed. Run times are subject to the complexity of tweets, where higher volume and more complex speech will increase runtime.
 
     If you are using a local MySQL database, runtime will be lower (generally).
 
