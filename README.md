@@ -10,6 +10,8 @@ There are two basic requirements to use TweetERA:
 1) You must have [research level access to Twitter API v2](https://developer.twitter.com/en/products/twitter-api/academic-research) and adhere to its terms and agreements.
 2) You must create an empty MySQL database (details below).
 
+[Sample TweetERA report](https://rawcdn.githack.com/BrianS3/MI2_drown_murphy_seko/d05e5ab616208221f5cc337aab266d5984dad536/assets/Sentiment_Report.html)
+
 
 # Getting Started
 
